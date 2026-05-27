@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sonu Chaudhary — Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      font-size: 9.5pt;
+      color: #1a1a2e;
+      background: #fff;
+      line-height: 1.4;
+    }
+
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 32px 36px;
+    }
+
+    /* ---- Header ---- */
+    .header { text-align: center; margin-bottom: 14px; }
+
+    .name {
+      font-size: 22pt;
+      font-weight: 700;
+      color: #1a1a2e;
+      letter-spacing: -0.3px;
+      margin-bottom: 4px;
+    }
+
+    .title-line {
+      font-size: 10pt;
+      color: #4f46e5;
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: 0.3px;
+    }
+
+    .contact-row {
+      font-size: 8.5pt;
+      color: #475569;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 4px 14px;
+    }
+
+    .contact-row a {
+      color: #4f46e5;
+      text-decoration: none;
+    }
+
+    .contact-row span { color: #94a3b8; }
+
+    /* ---- Divider ---- */
+    .divider {
+      border: none;
+      border-top: 1.5px solid #1f4e79;
+      margin: 10px 0 12px;
+    }
+
+    /* ---- Section ---- */
+    .section { margin-bottom: 13px; }
+
+    .section-heading {
+      font-size: 9pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #1f4e79;
+      border-bottom: 1px solid #bfdbfe;
+      padding-bottom: 3px;
+      margin-bottom: 8px;
+    }
+
+    /* ---- Summary ---- */
+    .summary { font-size: 9pt; color: #374151; line-height: 1.55; }
+
+    /* ---- Skills ---- */
+    .skills-table { width: 100%; border-collapse: collapse; }
+    .skills-table td {
+      padding: 2px 0;
+      font-size: 9pt;
+      vertical-align: top;
+    }
+    .skill-label {
+      font-weight: 600;
+      color: #1a1a2e;
+      width: 130px;
+      white-space: nowrap;
+    }
+    .skill-val { color: #374151; }
+
+    /* ---- Experience ---- */
+    .job { margin-bottom: 11px; }
+
+    .job-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1px;
+    }
+
+    .job-title-text {
+      font-weight: 700;
+      font-size: 9.5pt;
+      color: #1a1a2e;
+    }
+
+    .job-date {
+      font-size: 8.5pt;
+      color: #64748b;
+      white-space: nowrap;
+      margin-left: 12px;
+    }
+
+    .job-company {
+      font-size: 9pt;
+      color: #4f46e5;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .job-company a { color: #4f46e5; text-decoration: none; }
+
+    .job-module {
+      font-size: 8.8pt;
+      font-weight: 600;
+      color: #1f4e79;
+      margin: 5px 0 2px;
+    }
+
+    ul.bullets {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul.bullets li {
+      font-size: 9pt;
+      color: #374151;
+      padding-left: 12px;
+      position: relative;
+      margin-bottom: 2px;
+      line-height: 1.45;
+    }
+
+    ul.bullets li::before {
+      content: '•';
+      position: absolute;
+      left: 2px;
+      color: #4f46e5;
+    }
+
+    /* ---- Achievements ---- */
+    .achieve-list { list-style: none; padding: 0; }
+    .achieve-list li {
+      font-size: 9pt;
+      color: #374151;
+      padding-left: 14px;
+      position: relative;
+      margin-bottom: 3px;
+      line-height: 1.45;
+    }
+    .achieve-list li::before {
+      content: '★';
+      position: absolute;
+      left: 0;
+      color: #d97706;
+      font-size: 8pt;
+    }
+
+    /* ---- Education ---- */
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .edu-degree { font-weight: 700; font-size: 9.5pt; color: #1a1a2e; }
+    .edu-inst { font-size: 9pt; color: #4f46e5; font-weight: 500; }
+    .edu-right { font-size: 8.5pt; color: #64748b; text-align: right; }
+
+    /* ---- Certs ---- */
+    .cert-row {
+      display: flex;
+      gap: 6px;
+      font-size: 9pt;
+      color: #374151;
+      margin-bottom: 3px;
+    }
+    .cert-row::before { content: '▸'; color: #4f46e5; font-size: 8pt; }
+
+    /* ---- Print button ---- */
+    .print-bar {
+      text-align: center;
+      padding: 16px;
+      background: #f1f5f9;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .print-btn {
+      background: #4f46e5;
+      color: #fff;
+      border: none;
+      padding: 10px 28px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .print-btn:hover { background: #4338ca; }
+
+    @media print {
+      .print-bar { display: none; }
+      body { font-size: 9.5pt; }
+      .page { padding: 20px 24px; }
+      a { color: #4f46e5 !important; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="print-bar">
+    <button class="print-btn" onclick="window.print()">⬇ Save as PDF (Ctrl+P → Save as PDF)</button>
+  </div>
+
+  <div class="page">
+
+    <!-- HEADER -->
+    <div class="header">
+      <div class="name">SONU CHAUDHARY</div>
+      <div class="title-line">Full Stack Developer &nbsp;|&nbsp; 3+ Years &nbsp;|&nbsp; Insurance-Tech &amp; AI-Integrated Products</div>
+      <div class="contact-row">
+        <span>Gurugram, Haryana</span>
+        <span>·</span>
+        <a href="mailto:chaudharysonu200212@gmail.com">chaudharysonu200212@gmail.com</a>
+        <span>·</span>
+        <span>+91 8171726983</span>
+        <span>·</span>
+        <a href="https://www.linkedin.com/in/sonu-chaudhary-63b475235" target="_blank">linkedin.com/in/sonu-chaudhary-63b475235</a>
+        <span>·</span>
+        <a href="https://github.com/sonutechgeek" target="_blank">github.com/sonutechgeek</a>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SUMMARY -->
+    <div class="section">
+      <div class="section-heading">Professional Summary</div>
+      <p class="summary">
+        Full Stack Developer with 3+ years of experience delivering end-to-end products across insurance-tech, fintech, and lottery &amp; gaming domains.
+        At PolicyX.com, I own the Motor Insurance module (Car &amp; Bike) and have built Term Insurance, Health Insurance, and the SharesCart unlisted-shares platform —
+        all using PHP/Laravel, MySQL, and Anthropic Claude AI API. Previously at Skill Lotto (Sugal &amp; Damani), I built 4 lottery &amp; gaming platforms
+        (Book My Rajshree, SkillLotto, SkillRock) across the full modern stack: React.js, Next.js, Node.js, Redux, PHP, and Laravel.
+      </p>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="section">
+      <div class="section-heading">Technical Skills</div>
+      <table class="skills-table">
+        <tr>
+          <td class="skill-label">Backend (Current)</td>
+          <td class="skill-val">PHP, Laravel, Core PHP, RESTful API Design &amp; Integration, Payment Gateway</td>
+        </tr>
+        <tr>
+          <td class="skill-label">Full Stack (Previous)</td>
+          <td class="skill-val">React.js, Redux, Next.js, Node.js, PHP, Laravel, jQuery, JavaScript (ES6+)</td>
+        </tr>
+        <tr>
+          <td class="skill-label">AI / LLM</td>
+          <td class="skill-val">Anthropic Claude API — data-mapping engine, AI admin dashboard, prompt engineering</td>
+        </tr>
+        <tr>
+          <td class="skill-label">Insurance Domain</td>
+          <td class="skill-val">Motor (Car &amp; Bike), Term Insurance, Health Insurance — quote, KYC, policy issuance</td>
+        </tr>
+        <tr>
+          <td class="skill-label">Database</td>
+          <td class="skill-val">MySQL — schema design, query optimisation, performance tuning</td>
+        </tr>
+        <tr>
+          <td class="skill-label">Tools &amp; Practices</td>
+          <td class="skill-val">Git, GitHub, VS Code, Unit Testing, Clean Code, OOP, DSA</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="section">
+      <div class="section-heading">Work Experience</div>
+
+      <!-- PolicyX -->
+      <div class="job">
+        <div class="job-top">
+          <span class="job-title-text">Full Stack Developer</span>
+          <span class="job-date">Apr 2025 – Present</span>
+        </div>
+        <div class="job-company">
+          PolicyX.com Insurance Web Aggregator Pvt. Ltd. &nbsp;—&nbsp;
+          <a href="https://policyx.com" target="_blank">policyx.com</a> &nbsp;|&nbsp;
+          <a href="https://sharescart.com" target="_blank">sharescart.com</a>
+        </div>
+
+        <div class="job-module">Motor Insurance (policyx.com/motor-insurance)</div>
+        <ul class="bullets">
+          <li>Led end-to-end development of the Motor Insurance module — Car &amp; Bike insurance from scratch as sole developer.</li>
+          <li>Integrated 10+ third-party insurer APIs for real-time premium quotes, KYC validation, and instant policy issuance.</li>
+          <li>Built proposal forms, payment gateway integration, and policy download flows using PHP/Laravel + jQuery.</li>
+          <li>Optimised API response time by 25% through backend refactoring and MySQL query tuning.</li>
+        </ul>
+
+        <div class="job-module">Term Insurance (policyx.com/term-insurance)</div>
+        <ul class="bullets">
+          <li>Developed term insurance frontend flows and backend API integrations for quote comparison and lead capture.</li>
+          <li>Built dynamic flows handling complex eligibility logic and insurer-specific fields.</li>
+        </ul>
+
+        <div class="job-module">Health Insurance</div>
+        <ul class="bullets">
+          <li>Contributed to health insurance module — premium calculation flows, insurer API integration, and UI components.</li>
+        </ul>
+
+        <div class="job-module">SharesCart – Unlisted Shares Platform (sharescart.com)</div>
+        <ul class="bullets">
+          <li>Built a fintech platform for trading pre-IPO / unlisted shares — backend in PHP/Laravel, MySQL, with AI-powered workflows.</li>
+          <li>Integrated Anthropic Claude AI API to develop an intelligent data-mapping engine — automates complex field-level reconciliation between share registrar data and platform schema.</li>
+          <li>Built an AI-powered admin dashboard using Claude API for smart data handling, bulk-upload processing, anomaly flagging, and report generation.</li>
+        </ul>
+      </div>
+
+      <!-- Skill Lotto -->
+      <div class="job">
+        <div class="job-top">
+          <span class="job-title-text">Full Stack PHP Developer</span>
+          <span class="job-date">Jan 2023 – Apr 2025</span>
+        </div>
+        <div class="job-company">
+          Skill Lotto Solutions Pvt. Ltd. (Sugal &amp; Damani) &nbsp;—&nbsp;
+          <a href="https://skilllottosolutions.com" target="_blank">skilllottosolutions.com</a>
+        </div>
+        <ul class="bullets">
+          <li>Led end-to-end full-stack development of Book My Rajshree (BMR) — a high-traffic consumer lottery platform; improved scalability, performance, and usability.</li>
+          <li>Built and maintained 4 major platforms: Book My Rajshree | My Rajshree | SkillLotto | SkillRock — covering ticket booking, result management, wallet, and gaming workflows.</li>
+          <li>Developed RESTful APIs, dynamic React.js UI components, and Telegram API automation for real-time notifications &amp; lottery result workflows.</li>
+          <li>Handled high-concurrency gaming scenarios — optimised MySQL queries and backend logic for peak lottery draw traffic.</li>
+          <li>Delivered 15–20 modules consistently on schedule; earned Certificate of Excellence (Dec 2024).</li>
+          <li>Tech stack: React.js, Next.js, Node.js, Redux, PHP, Laravel, jQuery, JavaScript, MySQL.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- ACHIEVEMENTS -->
+    <div class="section">
+      <div class="section-heading">Key Achievements</div>
+      <ul class="achieve-list">
+        <li>Owned Motor Insurance module at PolicyX — sole developer, end-to-end, from zero to production.</li>
+        <li>Delivered AI integration (Anthropic Claude API) in production fintech product (SharesCart) — mapping engine + admin dashboard.</li>
+        <li>Improved API response time by 25% via backend optimisation and query refactoring.</li>
+        <li>Delivered 15+ production modules across 2 companies with clean, tested, maintainable code.</li>
+        <li>Certificate of Excellence — Skill Lotto Solutions, Dec 2024.</li>
+      </ul>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="section">
+      <div class="section-heading">Education</div>
+      <div class="edu-row">
+        <div>
+          <div class="edu-degree">B.Tech – Computer Science Engineering</div>
+          <div class="edu-inst">Dr. A.P.J. Abdul Kalam Technical University (AKTU)</div>
+        </div>
+        <div class="edu-right">
+          CGPA: 8.3 / 10<br>2019 – 2023
+        </div>
+      </div>
+    </div>
+
+    <!-- CERTIFICATIONS -->
+    <div class="section">
+      <div class="section-heading">Certifications</div>
+      <div class="cert-row">Certificate of Excellence — Skill Lotto Solutions (Dec 2024)</div>
+      <div class="cert-row">Data Structures &amp; Algorithms in Java</div>
+      <div class="cert-row">Node.js — Udemy</div>
+    </div>
+
+  </div>
+
+</body>
+</html>
