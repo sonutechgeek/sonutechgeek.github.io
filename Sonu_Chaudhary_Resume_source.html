@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sonu Chaudhary — PHP Laravel Backend Developer Resume</title>
+  <title>Sonu Chaudhary — PHP Laravel Backend Developer</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -15,19 +15,17 @@
       line-height: 1.5;
     }
 
-    /* ---- Print / View bar ---- */
     .print-bar {
       text-align: center;
-      padding: 14px 16px;
+      padding: 14px;
       background: #f1f5f9;
       border-bottom: 1px solid #e2e8f0;
       display: flex;
       justify-content: center;
-      align-items: center;
       gap: 12px;
     }
     .print-btn {
-      background: #4f46e5;
+      background: #1f4e79;
       color: #fff;
       border: none;
       padding: 9px 24px;
@@ -37,70 +35,62 @@
       cursor: pointer;
       font-family: inherit;
     }
-    .print-btn:hover { background: #4338ca; }
+    .print-btn:hover { background: #163a5f; }
     .back-btn {
-      color: #4f46e5;
-      border: 1.5px solid #4f46e5;
+      color: #1f4e79;
+      border: 1.5px solid #1f4e79;
       background: transparent;
       padding: 9px 20px;
       border-radius: 7px;
       font-size: 13px;
       font-weight: 600;
-      cursor: pointer;
-      font-family: inherit;
       text-decoration: none;
       display: inline-block;
     }
-    .back-btn:hover { background: rgba(79,70,229,0.07); }
 
     @media print {
       .print-bar { display: none; }
-      body { font-size: 10pt; }
       .page { padding: 18px 22px; }
       a { color: #111 !important; text-decoration: none; }
     }
 
-    /* ---- Page ---- */
     .page {
       max-width: 760px;
       margin: 0 auto;
-      padding: 28px 32px;
+      padding: 30px 36px;
     }
 
-    /* ---- Header ---- */
+    /* HEADER */
     .r-name {
-      font-size: 20pt;
+      font-size: 22pt;
       font-weight: 700;
       color: #111;
-      letter-spacing: -0.2px;
-      margin-bottom: 3px;
+      text-align: center;
+      letter-spacing: -0.3px;
+      margin-bottom: 4px;
     }
-
     .r-title {
-      font-size: 11pt;
+      font-size: 10.5pt;
       font-weight: 600;
-      color: #4f46e5;
-      margin-bottom: 7px;
+      color: #1f4e79;
+      text-align: center;
+      margin-bottom: 5px;
     }
-
     .r-contact {
       font-size: 9pt;
       color: #444;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 3px 0;
+      text-align: center;
     }
-
-    .r-contact a { color: #4f46e5; text-decoration: none; }
-    .r-contact .sep { margin: 0 8px; color: #bbb; }
+    .r-contact a { color: #1f4e79; text-decoration: none; }
+    .r-contact .sep { margin: 0 6px; color: #aaa; }
 
     .r-divider {
       border: none;
-      border-top: 2px solid #1f4e79;
-      margin: 10px 0;
+      border-top: 1.8px solid #1f4e79;
+      margin: 10px 0 11px;
     }
 
-    /* ---- Section ---- */
+    /* SECTIONS */
     .r-section { margin-bottom: 12px; }
 
     .r-section-title {
@@ -109,65 +99,56 @@
       text-transform: uppercase;
       letter-spacing: 0.1em;
       color: #1f4e79;
-      border-bottom: 1px solid #c7d9f0;
+      border-bottom: 1px solid #bfdbfe;
       padding-bottom: 2px;
       margin-bottom: 7px;
     }
 
-    /* ---- Summary ---- */
+    /* SUMMARY */
     .r-summary {
       font-size: 9.5pt;
       color: #222;
       line-height: 1.6;
     }
 
-    /* ---- Skills ---- */
+    /* SKILLS */
     .r-skills-row {
-      display: flex;
-      gap: 0;
-      margin-bottom: 4px;
       font-size: 9.5pt;
+      color: #222;
+      margin-bottom: 3px;
       line-height: 1.5;
     }
     .r-skill-cat {
-      font-weight: 600;
+      font-weight: 700;
       color: #111;
-      min-width: 150px;
-      flex-shrink: 0;
     }
-    .r-skill-val { color: #222; }
 
-    /* ---- Job ---- */
-    .r-job { margin-bottom: 12px; }
+    /* JOB */
+    .r-job { margin-bottom: 13px; }
 
     .r-job-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
       gap: 8px;
-      margin-bottom: 1px;
     }
-
     .r-job-title {
       font-size: 10.5pt;
       font-weight: 700;
       color: #111;
     }
-
     .r-job-date {
       font-size: 9pt;
       color: #555;
       white-space: nowrap;
-      flex-shrink: 0;
     }
-
     .r-job-company {
       font-size: 9.5pt;
       font-weight: 600;
-      color: #4f46e5;
+      color: #1f4e79;
       margin-bottom: 5px;
     }
-    .r-job-company a { color: #4f46e5; text-decoration: none; }
+    .r-job-company a { color: #1f4e79; text-decoration: none; }
 
     .r-module {
       font-size: 9.5pt;
@@ -176,13 +157,12 @@
       margin: 6px 0 3px;
     }
 
-    .r-bullets {
+    ul.r-bullets {
       list-style: disc;
-      padding-left: 16px;
+      padding-left: 17px;
       margin: 0;
     }
-
-    .r-bullets li {
+    ul.r-bullets li {
       font-size: 9.5pt;
       color: #222;
       margin-bottom: 2px;
@@ -195,123 +175,97 @@
       margin-top: 5px;
     }
 
-    /* ---- Achievements ---- */
-    .r-achieve {
+    /* ACHIEVEMENTS */
+    ul.r-achieve {
       list-style: disc;
-      padding-left: 16px;
+      padding-left: 17px;
       margin: 0;
     }
-    .r-achieve li {
+    ul.r-achieve li {
       font-size: 9.5pt;
       color: #222;
       margin-bottom: 3px;
       line-height: 1.5;
     }
 
-    /* ---- Education ---- */
+    /* EDUCATION */
     .r-edu-row {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: baseline;
       gap: 8px;
     }
-    .r-edu-degree {
-      font-size: 10pt;
-      font-weight: 700;
-      color: #111;
-    }
-    .r-edu-inst {
-      font-size: 9.5pt;
-      color: #4f46e5;
-      font-weight: 500;
-      margin-top: 1px;
-    }
-    .r-edu-right {
-      font-size: 9pt;
-      color: #555;
-      text-align: right;
-      white-space: nowrap;
-    }
+    .r-edu-degree { font-size: 10pt; font-weight: 700; color: #111; }
+    .r-edu-inst { font-size: 9.5pt; color: #1f4e79; font-weight: 500; margin-top: 1px; }
+    .r-edu-right { font-size: 9pt; color: #555; white-space: nowrap; }
 
-    /* ---- Certs ---- */
-    .r-cert-list {
+    /* CERTS */
+    ul.r-cert-list {
       list-style: disc;
-      padding-left: 16px;
+      padding-left: 17px;
       margin: 0;
     }
-    .r-cert-list li {
+    ul.r-cert-list li {
       font-size: 9.5pt;
       color: #222;
       margin-bottom: 2px;
       line-height: 1.5;
+    }
+
+    .r-footer {
+      font-size: 9pt;
+      color: #555;
+      margin-top: 10px;
+      font-style: italic;
     }
   </style>
 </head>
 <body>
 
   <div class="print-bar">
-    <a href="index.html" class="back-btn">← Back to Portfolio</a>
+    <a href="index.html" class="back-btn">← Portfolio</a>
     <button class="print-btn" onclick="window.print()">⬇ Save as PDF (Ctrl+P → Save as PDF)</button>
   </div>
 
   <div class="page">
 
-    <!-- ===== HEADER ===== -->
+    <!-- HEADER -->
     <div class="r-name">SONU CHAUDHARY</div>
-    <div class="r-title">PHP Laravel Backend Developer &nbsp;|&nbsp; 3+ Years Experience</div>
+    <div class="r-title">PHP Laravel Backend Developer &nbsp;|&nbsp; 3+ Years &nbsp;|&nbsp; Insurance-Tech &amp; AI-Integrated Products</div>
     <div class="r-contact">
-      <span>Gurugram, Haryana (Open to Relocation)</span>
+      <span>Gurugram, Haryana (Hometown: Mathura, UP)</span>
       <span class="sep">|</span>
       <a href="mailto:chaudharysonu200212@gmail.com">chaudharysonu200212@gmail.com</a>
       <span class="sep">|</span>
       <span>+91 8171726983</span>
       <span class="sep">|</span>
-      <a href="https://linkedin.com/in/sonu-chaudhary-63b475235" target="_blank">linkedin.com/in/sonu-chaudhary-63b475235</a>
+      <a href="https://linkedin.com/in/sonu-chaudhary-63b475235" target="_blank">LinkedIn</a>
       <span class="sep">|</span>
-      <a href="https://github.com/sonutechgeek" target="_blank">github.com/sonutechgeek</a>
+      <a href="https://github.com/sonutechgeek" target="_blank">GitHub</a>
     </div>
 
     <hr class="r-divider">
 
-    <!-- ===== PROFESSIONAL SUMMARY ===== -->
+    <!-- PROFESSIONAL SUMMARY -->
     <div class="r-section">
       <div class="r-section-title">Professional Summary</div>
       <p class="r-summary">
-        PHP Laravel Backend Developer with 3+ years of experience designing and building scalable RESTful APIs, backend systems, and production platforms in insurance-tech, fintech, and gaming domains. Core expertise in PHP, Laravel, Node.js, and MySQL. At PolicyX.com, sole developer and owner of the Motor Insurance module — integrated 15+ third-party insurer APIs and reduced API response time by 25%. Built the SharesCart fintech platform with Anthropic Claude AI API integration for automated data-mapping. Familiar with React.js and Next.js frontend integration. Open to relocation.
+        PHP Laravel Backend Developer with 3+ years of experience building scalable RESTful APIs, backend systems, and production platforms across insurance-tech, fintech, and lottery &amp; gaming domains. Core expertise in PHP, Laravel, Node.js, and MySQL. At PolicyX.com, sole developer and owner of the Motor Insurance module — integrated 15+ third-party insurer APIs and reduced API response time by 25%. Built the SharesCart fintech platform with Anthropic Claude AI API integration for automated data-mapping. Previously at Skill Lotto (Sugal &amp; Damani), built PHP/Laravel backends for 4 high-traffic lottery &amp; gaming platforms alongside React.js/Next.js frontends. Open to relocation.
       </p>
     </div>
 
-    <!-- ===== TECHNICAL SKILLS ===== -->
+    <!-- TECHNICAL SKILLS -->
     <div class="r-section">
       <div class="r-section-title">Technical Skills</div>
-
-      <div class="r-skills-row">
-        <span class="r-skill-cat">Backend (Primary):</span>
-        <span class="r-skill-val">PHP, Laravel, Core PHP, Node.js, RESTful API Design &amp; Integration, Eloquent ORM, Middleware, Queues &amp; Jobs, Payment Gateway Integration</span>
-      </div>
-      <div class="r-skills-row">
-        <span class="r-skill-cat">Frontend (Familiar):</span>
-        <span class="r-skill-val">React.js, Next.js, Redux, jQuery, JavaScript (ES6+)</span>
-      </div>
-      <div class="r-skills-row">
-        <span class="r-skill-cat">Database:</span>
-        <span class="r-skill-val">MySQL — schema design, query optimisation, performance tuning, high-concurrency handling</span>
-      </div>
-      <div class="r-skills-row">
-        <span class="r-skill-cat">AI / LLM Integration:</span>
-        <span class="r-skill-val">Anthropic Claude API, prompt engineering, AI-powered admin dashboard, data-mapping automation</span>
-      </div>
-      <div class="r-skills-row">
-        <span class="r-skill-cat">Insurance Domain:</span>
-        <span class="r-skill-val">Motor (Car &amp; Bike), Term Insurance, Health Insurance — quote, KYC, policy issuance, insurer API integration</span>
-      </div>
-      <div class="r-skills-row">
-        <span class="r-skill-cat">Tools &amp; Practices:</span>
-        <span class="r-skill-val">Git, GitHub, VS Code, OOP, Clean Code, Unit Testing, DSA</span>
-      </div>
+      <div class="r-skills-row"><span class="r-skill-cat">Backend (Primary):</span> PHP, Laravel, Core PHP, Node.js, RESTful API Design &amp; Integration, Eloquent ORM, Middleware, Queues &amp; Jobs, Payment Gateway Integration</div>
+      <div class="r-skills-row"><span class="r-skill-cat">Frontend (Familiar):</span> React.js, Next.js, Redux, jQuery, JavaScript (ES6+)</div>
+      <div class="r-skills-row"><span class="r-skill-cat">Database:</span> MySQL — schema design, query optimisation, performance tuning, high-concurrency handling</div>
+      <div class="r-skills-row"><span class="r-skill-cat">AI / LLM Integration:</span> Anthropic Claude API — data-mapping engine, AI admin dashboard, prompt engineering</div>
+      <div class="r-skills-row"><span class="r-skill-cat">Insurance Domain:</span> Motor (Car &amp; Bike), Term Insurance, Health Insurance — quote, KYC, policy issuance, insurer API integration</div>
+      <div class="r-skills-row"><span class="r-skill-cat">Tools &amp; Practices:</span> Git, GitHub, VS Code, Unit Testing, Clean Code, OOP, DSA</div>
     </div>
 
-    <!-- ===== WORK EXPERIENCE ===== -->
+    <!-- WORK EXPERIENCE -->
     <div class="r-section">
       <div class="r-section-title">Work Experience</div>
 
@@ -323,7 +277,8 @@
         </div>
         <div class="r-job-company">
           PolicyX.com Insurance Web Aggregator Pvt. Ltd. —
-          <a href="https://policyx.com" target="_blank">policyx.com</a> &nbsp;|&nbsp;
+          <a href="https://policyx.com" target="_blank">policyx.com</a>
+          &nbsp;|&nbsp;
           <a href="https://sharescart.com" target="_blank">sharescart.com</a>
         </div>
 
@@ -337,8 +292,8 @@
 
         <div class="r-module">Term Insurance (policyx.com/term-insurance/)</div>
         <ul class="r-bullets">
-          <li>Built backend API integrations and dynamic eligibility-logic flows for quote comparison and lead capture.</li>
-          <li>Handled insurer-specific field mapping and complex rule processing on the server side.</li>
+          <li>Built backend API integrations and server-side eligibility-logic flows for quote comparison and lead capture.</li>
+          <li>Handled insurer-specific field mapping and complex rule processing in PHP/Laravel.</li>
         </ul>
 
         <div class="r-module">Health Insurance</div>
@@ -348,9 +303,9 @@
 
         <div class="r-module">SharesCart — Unlisted Shares Fintech Platform (sharescart.com)</div>
         <ul class="r-bullets">
-          <li>Built fintech platform for trading pre-IPO and unlisted shares — backend in PHP/Laravel and MySQL.</li>
+          <li>Built fintech platform for trading pre-IPO and unlisted shares — backend in PHP/Laravel, MySQL.</li>
           <li>Integrated Anthropic Claude AI API to build an intelligent data-mapping engine that automates field-level reconciliation between share registrar data and platform schema.</li>
-          <li>Developed AI-powered admin dashboard for bulk-upload processing, anomaly flagging, and automated report generation.</li>
+          <li>Developed AI-powered admin dashboard for bulk-upload processing, anomaly flagging, and automated report generation; significantly reduced manual data-mapping effort.</li>
         </ul>
 
         <div class="r-stack"><strong>Stack:</strong> PHP · Laravel · MySQL · jQuery · JavaScript · Anthropic Claude AI API</div>
@@ -367,45 +322,42 @@
           <a href="https://skilllottosolutions.com" target="_blank">skilllottosolutions.com</a>
         </div>
         <ul class="r-bullets">
-          <li>Led backend development of Book My Rajshree — a high-traffic consumer lottery platform; designed PHP/Laravel RESTful APIs, improved scalability and system performance.</li>
-          <li>Built and maintained backends for 4 major platforms: Book My Rajshree, My Rajshree, SkillLotto, SkillRock — ticket booking, wallet systems, result management, and real-time gaming workflows.</li>
-          <li>Developed RESTful APIs in PHP/Laravel and Node.js; integrated Telegram API for real-time lottery result notifications and draw automation.</li>
+          <li>Led backend development of Book My Rajshree (bookmyrajshree.com) — a high-traffic consumer lottery platform; designed PHP/Laravel RESTful APIs, improved scalability and performance.</li>
+          <li>Built and maintained PHP/Laravel backends for 4 major platforms: Book My Rajshree, My Rajshree, SkillLotto, SkillRock — ticket booking, wallet systems, result management, and gaming workflows.</li>
+          <li>Developed RESTful APIs in PHP/Laravel and Node.js; Telegram API automation for real-time lottery result notifications and draw workflows.</li>
           <li>Optimised MySQL queries and Laravel/Node.js backend logic for high-concurrency lottery draw traffic.</li>
           <li>Integrated React.js and Next.js frontends with backend APIs for seamless full-cycle delivery.</li>
           <li>Consistently delivered 15–20 backend modules on schedule; awarded Certificate of Excellence (Dec 2024).</li>
         </ul>
         <div class="r-stack"><strong>Stack:</strong> PHP · Laravel · Node.js · MySQL · React.js · Next.js · Redux · jQuery · JavaScript</div>
       </div>
-
     </div>
 
-    <!-- ===== KEY ACHIEVEMENTS ===== -->
+    <!-- KEY ACHIEVEMENTS -->
     <div class="r-section">
       <div class="r-section-title">Key Achievements</div>
       <ul class="r-achieve">
-        <li>Sole developer — owned Motor Insurance module at PolicyX end-to-end, from zero to production, handling design, development, and 15+ API integrations independently.</li>
-        <li>Delivered AI in production — Anthropic Claude API integration in live fintech product (SharesCart): automated data-mapping engine + AI admin dashboard.</li>
-        <li>25% reduction in API response time via backend refactoring and MySQL query tuning on Motor Insurance module.</li>
-        <li>15+ production backend modules delivered across 2 companies with clean, maintainable code, consistently on schedule.</li>
+        <li>Sole developer — owned Motor Insurance module at PolicyX end-to-end, from zero to production, with 15+ insurer API integrations.</li>
+        <li>AI in production — delivered Anthropic Claude API integration in live fintech product (SharesCart): automated data-mapping engine + AI admin dashboard.</li>
+        <li>25% API response time improvement via PHP/Laravel backend refactoring and MySQL query tuning.</li>
+        <li>15+ production backend modules delivered across 2 companies with clean, maintainable code, on schedule.</li>
         <li>Certificate of Excellence — Skill Lotto Solutions, Dec 2024.</li>
       </ul>
     </div>
 
-    <!-- ===== EDUCATION ===== -->
+    <!-- EDUCATION -->
     <div class="r-section">
       <div class="r-section-title">Education</div>
       <div class="r-edu-row">
         <div>
-          <div class="r-edu-degree">Bachelor of Technology (B.Tech) — Computer Science Engineering</div>
-          <div class="r-edu-inst">Dr. A.P.J. Abdul Kalam Technical University (AKTU), Uttar Pradesh</div>
+          <div class="r-edu-degree">B.Tech — Computer Science Engineering</div>
+          <div class="r-edu-inst">Dr. A.P.J. Abdul Kalam Technical University (AKTU)</div>
         </div>
-        <div class="r-edu-right">
-          CGPA: 8.3 / 10<br>2019 – 2023
-        </div>
+        <div class="r-edu-right">CGPA: 8.3 / 10 &nbsp;|&nbsp; 2019 – 2023</div>
       </div>
     </div>
 
-    <!-- ===== CERTIFICATIONS ===== -->
+    <!-- CERTIFICATIONS -->
     <div class="r-section">
       <div class="r-section-title">Certifications &amp; Awards</div>
       <ul class="r-cert-list">
@@ -414,6 +366,8 @@
         <li>Node.js — Udemy</li>
       </ul>
     </div>
+
+    <div class="r-footer">Open to relocation &nbsp;·&nbsp; Passionate about clean backend architecture &amp; AI-powered products</div>
 
   </div>
 
